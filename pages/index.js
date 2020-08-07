@@ -1,5 +1,7 @@
 import Head from "next/head";
 
+import KochkaIcon from "./KochkaIcon";
+
 export default function Home() {
   return (
     <>
@@ -9,7 +11,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <p>tktk</p>
+        <KochkaIcon />
       </main>
     </>
   );
