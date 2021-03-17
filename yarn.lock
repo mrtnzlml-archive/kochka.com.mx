@@ -66,14 +66,14 @@
     strip-ansi "^6.0.0"
     text-table "^0.2.0"
 
-"@adeira/fetch@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@adeira/fetch/-/fetch-2.0.0.tgz#41f9b2c8f2fa7d8a78714a8d42c7cd1de1a29adf"
-  integrity sha512-kEg130Qe18V+w06lQDw+h5ovPrPi362EqdxkwCbT7RgQK027M3r3Vcb6Zj6hp0voeAC50/QG6JdH67DIMvLNIA==
+"@adeira/fetch@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@adeira/fetch/-/fetch-2.0.1.tgz#00438ca85878f4aeb43cdfac73f11d2883a69457"
+  integrity sha512-LatHBnV8uhN+nmeBjNqL+p09PZeWoabi0KFu8zTQKBeSoTXUHuTWcssbPnbqkdJ2AeL2FU5oFWpvPqFXgIbsBg==
   dependencies:
-    "@adeira/js" "^1.3.0"
-    "@babel/runtime" "^7.12.5"
-    cross-fetch "^3.0.6"
+    "@adeira/js" "^2.1.0"
+    "@babel/runtime" "^7.13.10"
+    cross-fetch "^3.1.0"
 
 "@adeira/js@^1.3.0":
   version "1.3.0"
@@ -88,13 +88,6 @@
   integrity sha512-oicensIS7cf4R4hxDwKTHSwDLNA+V6jD90KGqSCqDupQepOceCfI/uXk4OClDtAmJioOMT4t7QAewmH5pC0VdA==
   dependencies:
     "@babel/runtime" "^7.12.13"
-
-"@adeira/logger@^0.4.0":
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/@adeira/logger/-/logger-0.4.0.tgz#8e1d506102ab3c1896a4e9c219c767e2c025ed70"
-  integrity sha512-cBd3UnGazeElGKJwCrmXs+e8BtpogGoWt7EJfgCR9oNqWfI0A55Egfek5EOTwLawsQIm3FQdISeL3Kuu2AkGfw==
-  dependencies:
-    "@babel/runtime" "^7.12.5"
 
 "@adeira/monorepo-utils@^0.11.0":
   version "0.11.0"
@@ -114,14 +107,13 @@
   dependencies:
     "@babel/runtime" "^7.12.5"
 
-"@adeira/relay@^3.1.1":
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/@adeira/relay/-/relay-3.1.1.tgz#e4cf7a1f779ef519ca6fea15e639e0b29207df84"
-  integrity sha512-zAZwkyFDUSlg51W2ZL+Gzt+V5JtsHRVTwWR+1eEm+1CqXdNoW6XMwK4v7bNkWQIGotnpUBKSmo8zqqcmkH1P8w==
+"@adeira/relay@^3.2.0":
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/@adeira/relay/-/relay-3.2.0.tgz#8a58519c32928f792bc955fffec63be27c8aca9f"
+  integrity sha512-dOOHm/wiuEBtX5MXvebouHBlVGcfFgZrc9LnJRcqDAI40aatWPj7RxxRmgtyLrxsf8oIr0cHneU9YjWM+JzNow==
   dependencies:
-    "@adeira/fetch" "^2.0.0"
+    "@adeira/fetch" "^2.0.1"
     "@adeira/js" "^2.1.0"
-    "@adeira/logger" "^0.4.0"
     "@adeira/monorepo-utils" "^0.11.0"
     "@adeira/signed-source" "^2.0.0"
     "@babel/register" "^7.13.8"
@@ -2682,10 +2674,17 @@ create-jest-runner@^0.7.0:
     jest-worker "^26.3.0"
     throat "^5.0.0"
 
-cross-fetch@^3.0.4, cross-fetch@^3.0.6:
+cross-fetch@^3.0.4:
   version "3.0.6"
   resolved "https://registry.yarnpkg.com/cross-fetch/-/cross-fetch-3.0.6.tgz#3a4040bc8941e653e0e9cf17f29ebcd177d3365c"
   integrity sha512-KBPUbqgFjzWlVcURG+Svp9TlhA5uliYtiNx/0r8nv0pdypeQCRJ9IaSIc3q/x3q8t3F75cHuwxVql1HFGHCNJQ==
+  dependencies:
+    node-fetch "2.6.1"
+
+cross-fetch@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/cross-fetch/-/cross-fetch-3.1.0.tgz#6447c13cc8887fa2a66caef92888d7fdaab6e0d1"
+  integrity sha512-a+yso9lSpXQI9DH+YjAu/m0dVfP8IVoZDPBLLFcvGpeq3KHNdikkekTOdkHiXEuTq4GBOeO0MfWkE40yzF1w7g==
   dependencies:
     node-fetch "2.6.1"
 
