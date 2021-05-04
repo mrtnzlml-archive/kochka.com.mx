@@ -1,4 +1,33 @@
-module.exports = {
+// @flow
+
+const path = require('path');
+const withTranspileModules = require('next-transpile-modules');
+const withCustomBabelConfigFile = require('next-plugin-custom-babel-config');
+
+const nextConfig = withCustomBabelConfigFile(
+  withTranspileModules([
+    '@adeira/css-colors',
+    '@adeira/fetch',
+    '@adeira/js',
+    '@adeira/murmur-hash',
+    '@adeira/relay',
+    '@adeira/sx',
+    '@adeira/sx-design',
+  ])({
+    babelConfigFile: path.join(__dirname, '.babelrc'),
+    webpack: (nextConfig) => {
+      nextConfig.module.rules.push({
+        type: 'javascript/auto',
+        test: /\.mjs$/,
+      });
+
+      return nextConfig;
+    },
+  }),
+);
+
+module.exports = ({
+  ...nextConfig,
   poweredByHeader: false,
   reactStrictMode: true,
   i18n: {
@@ -8,4 +37,4 @@ module.exports = {
     ],
     defaultLocale: 'es-mx',
   },
-};
+} /*: any */);
